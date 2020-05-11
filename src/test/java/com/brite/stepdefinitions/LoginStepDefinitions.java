@@ -33,4 +33,39 @@ public class LoginStepDefinitions {
         Assert.assertEquals("#Inbox - Odoo", Driver.getDriver().getTitle());
     }
 
+    @When("user logs in as a sales manager")
+    public void user_logs_in_as_a_sales_manager() {
+        System.out.println("Login as a sales manager");
+        loginPage.loginAsSalesManager();
+    }
+
+    @When("user logs in as an expenses manager")
+    public void user_logs_in_as_an_expenses_manager() {
+        System.out.println("Login as an expenses manager");
+        loginPage.loginAsExpensesManager();
+    }
+
+    @When("user logs in as an events manager")
+    public void user_logs_in_as_an_events_manager() {
+        System.out.println("Login as an events manager");
+        loginPage.loginAsEventsManager();
+    }
+
+    @When("user logs in as a crm manager")
+    public void user_logs_in_as_a_crm_manager() {
+        System.out.println("Login as a crm manager");
+        loginPage.loginAsCRMManager();
+    }
+
+    @When("user logs in as a pos manager")
+    public void user_logs_in_as_a_pos_manager() {
+        System.out.println("Login as a pos manager");
+        loginPage.loginAsPOSManager();
+    }
+
+    @When("user logs in as an inventory manager")
+    public void user_logs_in_as_an_inventory_manager() {
+        System.out.println("Login as a inventory manager");
+        loginPage.loginAsInventoryManager();
+    }
 }
