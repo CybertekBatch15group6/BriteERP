@@ -25,6 +25,18 @@ public class LoginStepDefinitions {
         loginPage.loginAsPurchasingManager();
     }
 
+//    @When("user navigates to Contacts")
+//    public void user_navigates_to_Contacts() {
+//        loginPage.clickOnContacts();
+//    }
+
+    @When("user logs in as an inventory manager manager")
+    public void user_logs_in_as_an_inventory_manager_manager() {
+        System.out.println("Login as a inventory manager");
+        loginPage.loginAsInventoryManager();
+    }
+
+
     @Then("user should verify that title is #Inbox - Odoo")
     public void user_should_verify_that_title_is_Inbox_Odoo() {
         System.out.println("Verify that title is #Inbox - Odoo");
