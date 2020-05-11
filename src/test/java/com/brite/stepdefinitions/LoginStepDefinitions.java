@@ -25,10 +25,10 @@ public class LoginStepDefinitions {
         loginPage.loginAsPurchasingManager();
     }
 
-//    @When("user navigates to Contacts")
-//    public void user_navigates_to_Contacts() {
-//        loginPage.clickOnContacts();
-//    }
+    @When("user navigates to Contacts")
+    public void user_navigates_to_Contacts() {
+        loginPage.navigation("Contacts");
+    }
 
     @When("user logs in as an inventory manager manager")
     public void user_logs_in_as_an_inventory_manager_manager() {

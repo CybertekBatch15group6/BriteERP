@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ContactsPage extends BasePage {
+
     @FindBy(xpath = "//a[@data-menu='68']")
     private WebElement contacts;
 
@@ -30,7 +31,7 @@ public class ContactsPage extends BasePage {
     }
 
     public void clickOnCreate() {
-        wait.until(ExpectedConditions.elementToBeClickable(createButton)).click();
+       createButton.click();
     }
 
     public void clickOnCompany() {
