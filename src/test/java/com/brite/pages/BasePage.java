@@ -18,7 +18,8 @@ public abstract class BasePage {
     public String getCurrentUserName(){
         BrowserUtils.wait(3);
         wait.until(ExpectedConditions.visibilityOf(curretUsername));
-        return curretUsername.getText();
+       return curretUsername.getText();
+
     }
 
 
