@@ -1,6 +1,6 @@
 @login
-  Feature: Login
-    As user, I want to be able to login with email and password
+Feature: Login
+  As user, I want to be able to login with email and password
 
   Background: open login page
     Given user is on the login page
@@ -40,3 +40,4 @@
     Scenario: Login as an inventory manager and verify that title is #Inbox - Odoo
       When user logs in as an inventory manager
       Then user should verify that title is #Inbox - Odoo
+
