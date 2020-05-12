@@ -3,7 +3,6 @@ package com.brite.pages;
 import com.brite.utilities.BrowserUtils;
 import com.brite.utilities.ConfigurationReader;
 import com.brite.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,6 +19,8 @@ public class LoginPage extends BasePage {
     @FindBy (css = "[class='btn btn-primary']")
     private WebElement login;
 
+
+
     public LoginPage (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -28,6 +29,7 @@ public class LoginPage extends BasePage {
      * Login as Purchasing Manager
      * credentials will be retrieved from configuration.properties file
      */
+
     public void loginAsPurchasingManager(){
         email.sendKeys(ConfigurationReader.getProperty("purchasing_manager"));
         BrowserUtils.wait(2);
@@ -62,8 +64,8 @@ public class LoginPage extends BasePage {
      * credentials will be retrieved from configuration.properties file
      */
     public void loginAsEventsManager(){
-        email.sendKeys(ConfigurationReader.getProperty("events_scrm_manager"));
-        BrowserUtils.wait(2);
+        email.sendKeys(ConfigurationReader.getProperty("events_crm_manager"));
+        BrowserUtils.wait(20);
         password.sendKeys(ConfigurationReader.getProperty("events_password"));
         wait.until(ExpectedConditions.elementToBeClickable(login)).click();
     }

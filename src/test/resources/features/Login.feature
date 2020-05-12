@@ -1,42 +1,47 @@
 @login
-  Feature: Login
-    As user, I want to be able to login with email and password
+Feature: Login
+
 
   Background: open login page
-    Given user is on the login page
-    When user i
+    Given User is on the login page
 
-    @purchasing_manager
-    Scenario: Login as a purchasing manager and verify that title is #Inbox - Odoo
-      When user logs in as a purchasing manager
-      Then user should verify that title is #Inbox - Odoo
+  @salesmanager
+  Scenario:Login with valid username and password
+    When User enters "salesmanager40@info.com" username and "salesmanager" password
+    Then User should verify that title is a "#Inbox - Odoo"
 
-    @sales_manager
-    Scenario: Login as a sales manager and verify that title is #Inbox - Odoo
-      When user logs in as a sales manager
-      Then user should verify that title is #Inbox - Odoo
+  @expensesmanager
+  Scenario:Login with valid username and password
+    When User enters "expensesmanager50@info.com" username and "expensesmanager" password
+    Then User should verify that title is a "#Inbox - Odoo"
 
-    @expenses_manager
-    Scenario: Login as an expenses manager and verify that title is #Inbox - Odoo
-      When user logs in as an expenses manager
-      Then user should verify that title is #Inbox - Odoo
+  @eventmanager
 
-    @events_manager
-    Scenario: Login as an events manager and verify that title is #Inbox - Odoo
-      When user logs in as an events manager
-      Then user should verify that title is #Inbox - Odoo
+  Scenario:Login with valid username and password
+    When User enters "eventscrmmanager44@info.com" username and "eventscrmmanager" password
+    Then User should verify that title is a "#Inbox - Odoo"
 
-    @crm_manager
-    Scenario: Login as a crm manager and verify that title is #Inbox - Odoo
-      When user logs in as a crm manager
-      Then user should verify that title is #Inbox - Odoo
 
-    @pos_manager
-    Scenario: Login as a pos manager and verify that title is #Inbox - Odoo
-      When user logs in as a pos manager
-      Then user should verify that title is #Inbox - Odoo
+  @negative_scenario
+  Scenario:Login with invalid username and password
+    When User logs in with invalid credentials
+    Then User should verify that error message "Wrong login/password."
 
-    @inventory_manager
-    Scenario: Login as an inventory manager and verify that title is #Inbox - Odoo
-      When user logs in as an inventory manager
-      Then user should verify that title is #Inbox - Odoo
+  @scenario_outline
+  Scenario Outline: User names test
+    When User enters "<username>" username and "<password>" password
+
+
+    Examples: credentials
+      | username                   | password        |
+      | salesmanager40@info.com    | salesmanager    |
+      | salesmanager41@info.com    | salesmanager    |
+      | salesmanager42@info.com    | salesmanager    |
+      | salesmanager43@info.com    | salesmanager    |
+      | salesmanager44@info.com    | salesmanager    |
+      |expensesmanager50@info.com  | expensesmanager |
+      |expensesmanager51@info.com  | expensesmanager |
+      |expensesmanager52@info.com  | expensesmanager |
+      |expensesmanager53@info.com  | expensesmanager |
+      |expensesmanager54@info.com  | expensesmanager |
+      |eventscrmmanager44@info.com | eventscrmmanager|
