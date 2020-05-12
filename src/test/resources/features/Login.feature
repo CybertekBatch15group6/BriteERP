@@ -5,6 +5,7 @@ Feature: Login
   Background: open login page
     Given User is on the login page
 
+
   @salesmanager
   Scenario:Login with valid username and password
     When User enters "salesmanager40@info.com" username and "salesmanager" password

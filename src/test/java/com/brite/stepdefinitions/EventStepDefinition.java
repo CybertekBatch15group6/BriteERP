@@ -16,10 +16,10 @@ public class EventStepDefinition {
  // public void navigates_to_module(String module) {
  //    eventPage.navigateTo(module);
 //  }
-    @Given("User is on the login page")
-    public void user_is_on_the_login_page() {
+  //  @Given("User is on the login page")
+  //  public void user_is_on_the_login_page() {
      // Write code here that turns the phrase above into concrete action;
- }
+ //}
 
     @When("user logs in as a event manager")
     public void user_logs_in_as_a_event_manager() {
