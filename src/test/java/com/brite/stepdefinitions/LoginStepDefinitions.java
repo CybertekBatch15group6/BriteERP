@@ -68,4 +68,4 @@ public class LoginStepDefinitions {
         System.out.println("Login as a inventory manager");
         loginPage.loginAsInventoryManager();
     }
-
+}
