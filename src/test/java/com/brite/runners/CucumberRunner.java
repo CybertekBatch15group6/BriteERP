@@ -6,8 +6,8 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions (
-        glue = "com/brite/stepdefinitions",
+@CucumberOptions(
+        glue = "com/brite/stepDefinitions",
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
@@ -18,9 +18,6 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         }
 )
-
-
-
 
 
 public class CucumberRunner {
