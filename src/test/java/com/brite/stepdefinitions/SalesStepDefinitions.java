@@ -1,4 +1,4 @@
-package com.brite.stepdefinitions;
+package com.brite.stepDefinitions;
 
 import com.brite.pages.Sales.SalesPage;
 import io.cucumber.java.en.Then;

@@ -1,4 +1,4 @@
-package com.brite.stepdefinitions;
+package com.brite.stepDefinitions;
 
 import com.brite.utilities.Driver;
 import io.cucumber.java.After;
