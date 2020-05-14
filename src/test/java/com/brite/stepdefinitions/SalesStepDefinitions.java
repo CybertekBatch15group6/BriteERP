@@ -1,6 +1,5 @@
 package com.brite.stepdefinitions;
 
-import com.brite.pages.LoginPage;
 import com.brite.pages.Sales.SalesPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
