@@ -4,7 +4,6 @@ Feature: Login
 
   Background: open login page
     Given user is on the login page
-    When user i
 
     @purchasing_manager
     Scenario: Login as a purchasing manager and verify that title is #Inbox - Odoo

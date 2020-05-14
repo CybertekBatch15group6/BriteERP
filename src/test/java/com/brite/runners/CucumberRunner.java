@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
-        glue = "com/brite/stepdefinitions",
+        glue = "com/brite/stepDefinitions",
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-        tags = "@login",
+        tags = "@CreatePipeline",
         plugin = {
                 "html:target/default-report",
                 "json:target/cucumber1.json",

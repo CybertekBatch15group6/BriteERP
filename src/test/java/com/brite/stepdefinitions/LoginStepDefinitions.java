@@ -25,6 +25,12 @@ public class LoginStepDefinitions {
         loginPage.loginAsPurchasingManager();
     }
 
+    @When("user logs in as a crm manager")
+    public void user_logs_in_as_a_crm_manager() {
+        System.out.println("Logging in as purchasing manager");
+        loginPage.loginAsCRMManager();
+    }
+
     @Then("user should verify that title is #Inbox - Odoo")
     public void user_should_verify_that_title_is_Inbox_Odoo() {
         Assert.assertEquals("#Inbox - Odoo", Driver.getDriver().getTitle());
